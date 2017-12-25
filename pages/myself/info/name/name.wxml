@@ -1,0 +1,14 @@
+<!--pages/myself/set/name/name.wxml-->
+<view>
+  <view class='header'>
+    <view class='input-box'>
+      <input class='input-box-name' type='text' bindinput='checkName' maxlength='4' placeholder='请输入您的姓名' placeholder-style="font-size:32rpx;" value='{{name}}'/>
+    </view>
+  </view>
+  <view class='content'>
+    <text class="{{flag ? '' : 'error'}}">{{flag ? normal : error}}</text>
+  </view>
+  <view class='footer'>
+    <button bindtap='saveName' class='save-btn' size='80%'>保存</button>
+  </view>
+</view>

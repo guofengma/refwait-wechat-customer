@@ -1,0 +1,87 @@
+/**app.wxss**/
+page {
+  background-color: #F0F0F0;
+  display: block;
+  min-height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.merchant-box {
+  padding: 30rpx 40rpx;
+  width: 100%;
+  background-color: #fff;
+  border-top: solid 1px #F0F0F0;
+  float: left;
+}
+
+.merchant-box-left {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20%;
+  float: left;
+}
+
+.merchant-box-left image {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20%;
+}
+
+.merchant-box-mid {
+  margin-left: 30rpx;
+  height: 150rpx;
+  display: block;
+  float: left;
+}
+
+.merchant-box-mid-name {
+  margin-top: 15rpx;
+}
+
+.merchant-box-mid-name text {
+  font-weight: bold;
+}
+
+.merchant-box-mid-heat {
+  margin-top: 20rpx;
+}
+
+.merchant-box-mid-heat image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 5rpx;
+}
+
+.merchant-box-mid-heat text {
+  font-size: 28rpx;
+}
+
+.merchant-box-right {
+  float: right;
+  margin-right: 70rpx;
+  margin-top: 10rpx;
+}
+
+.merchant-box-right-status image {
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}
+
+.merchant-box-right-distance {
+  clear: both;
+  margin-top: 90rpx;
+}
+
+.merchant-box-right-distance text {
+  font-size: 30rpx;
+}

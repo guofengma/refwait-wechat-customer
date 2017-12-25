@@ -1,0 +1,15 @@
+<!--pages/myself/myself.wxml-->
+<view>
+  <view class='userinfo'>
+    <image class='userinfo-avatar' src='{{userInfo.avatarUrl}}'></image>
+    <text class='userinfo-nickname'>{{userInfo.nickName}}</text>
+  </view>
+  <view class='myself-list'>
+    <view class='myself-list-item' wx:for="{{list}}" wx:key="key" id='{{item.id}}' bindtap='navToSet'>
+      <image class='myself-list-item-icon' src='{{item.iconPath}}'></image>
+      <text class='myself-list-item-title'>{{item.title}}</text>
+      <image id='{{item.id}}' wx:if="{{item.flag}}" class='myself-list-item-more' src='/image/icon_more.png'></image>
+      <text class='myself-list-item-text' id='{{item.id}}'>{{item.text == "" ? "未设置" : item.text}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+/* pages/myself/set/phone/phone.wxss */
+page {
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 5%;
+}
+
+.input-box {
+  width: 90%;
+  border-bottom: 1px solid #1195db;
+  margin-bottom: 25rpx;
+  padding-bottom: 10rpx;
+}
+
+.input-box-phone {
+  margin: 5rpx 0 5rpx 25rpx;
+  width: 60%;
+  float: left;
+}
+
+.code-btn {
+  width: 30%;
+  font-size: 25rpx;
+  margin-right: 36rpx;
+  background-color: #fff;
+  border: 1px solid #1195db;
+  color: #1195db;
+}
+
+.input-box-code {
+    margin: 5rpx 25rpx;
+}
+
+.content {
+  font-size: 25rpx;
+}
+
+.input-box-code {
+  margin: 5rpx 25rpx;
+}
+
+.content {
+  text-align: center;
+}
+
+.content text {
+  font-size: 25rpx;
+}
+
+.footer {
+  padding: 5%;
+}
+
+.save-btn {
+  background-color: #1195db;
+  color: #fff;
+}
+
+.error {
+  color: red;
+}

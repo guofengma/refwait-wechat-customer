@@ -1,0 +1,41 @@
+/* pages/myself/set/name/name.wxss */
+page {
+  background-color: #fff;
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 20rpx 5%;
+}
+
+.input-box {
+  width: 90%;
+  border-bottom: 1px solid #1195db;
+}
+
+.input-box-name {
+  margin: 5rpx 25rpx;
+}
+
+.content {
+  text-align: center;
+}
+
+.content text {
+  font-size: 25rpx;
+}
+
+.footer {
+  padding: 5%;
+}
+
+.save-btn {
+  background-color: #1195db;
+  color: #fff;
+}
+
+.error {
+  color: red;
+}

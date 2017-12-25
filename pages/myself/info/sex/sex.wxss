@@ -1,0 +1,26 @@
+/* pages/myself/set/sex/sex.wxss */
+page {
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50rpx;
+}
+
+.header image {
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+}
+
+.footer {
+  margin: 50rpx 5%;
+}
+
+.save-btn {
+  background-color: #1195db;
+  color: #fff;
+}

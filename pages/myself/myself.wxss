@@ -1,0 +1,55 @@
+/* pages/myself/myself.wxss */
+.userinfo {
+  background: #fff;
+  padding: 10rpx;
+  margin: 25rpx auto;
+}
+
+.userinfo-avatar {
+  vertical-align: middle;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 21rpx;
+  border-radius: 10%;
+}
+
+.userinfo-nickname {
+  font-size: 36rpx;
+  margin-left: 15rpx;
+  color: lightblue;
+}
+
+.myself-list {
+  background-color: #F0F0F0;
+}
+
+.myself-list-item {
+  background-color: #fff;
+  margin-bottom: 1.5px;
+  padding: 25rpx 0;
+}
+
+.myself-list-item-icon {
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 20rpx 0 35rpx;
+}
+
+.myself-list-item-title {
+  font-size: 33rpx;
+  color: lightslategrey;
+}
+
+.myself-list-item-text {
+  font-size: 28rpx;
+  color: #8a8a8a;
+  float: right;
+  margin-right: 15rpx;
+}
+
+.myself-list-item-more {
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}

@@ -1,0 +1,22 @@
+<!--pages/myself/set/phone/phone.wxml-->
+<view>
+  <view class='header'>
+    <view class='input-box'>
+      <view>
+        <input class='input-box-phone' bindinput='checkPhone' type='number' maxlength='11' placeholder='请输入手机号码' placeholder-style="font-size:32rpx;"/>
+      </view>
+      <view>
+        <button bindtap='getVerificationCode' class='code-btn'>获取验证码</button>
+      </view>
+    </view>
+    <view class='input-box'>
+      <input class='input-box-code' bindinput='codeChange' value='{{code}}' type='text' maxlength='16' placeholder='请输入验证码' placeholder-style="font-size:32rpx;"/>
+    </view>
+  </view>
+  <view class='content'>
+    <text class="{{flag ? '' : 'error'}}">{{flag ? normal : error}}</text>
+  </view>
+  <view class='footer'>
+    <button bindtap='bindPhone' class='save-btn' size='80%'>绑定</button>
+  </view>
+</view>

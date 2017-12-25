@@ -1,0 +1,29 @@
+<!--pages/template/template.wxml-->
+<template name="merchantInfo">
+  <view class='merchant-box'>
+    <view class='merchant-box-left'>
+      <image src='{{iconUrl}}'></image>
+    </view>
+    <view class='merchant-box-mid'>
+      <view class='merchant-box-mid-name'>
+        <text>{{name}}</text>
+      </view>
+      <view class='merchant-box-mid-heat'>
+        <image src='/image/icon_heat.png'></image>
+        <text>{{heatValue}}</text>
+      </view>
+    </view>
+    <view class='merchant-box-right'>
+      <view class='merchant-box-right-status'>
+        <image src="{{status == 0 ? '/image/icon_rest.png' : '/image/icon_business.png'}}"></image>
+      </view>
+      <view class='merchant-box-right-distance'>
+        <text>距离{{distance}}Km</text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="templateTest">
+  <view class="temp-text">templateTest</view>
+</template>

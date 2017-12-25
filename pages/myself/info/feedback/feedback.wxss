@@ -1,0 +1,22 @@
+/* pages/myself/info/feedback/feedback.wxss */
+.textarea-box {
+  height: 35%;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 15rpx;
+}
+
+.textarea-box textarea {
+  width: 100%;
+  font-size: 26rpx;
+  padding: 30rpx 10rpx;
+}
+
+.btn-box {
+  padding: 5%;
+}
+
+.submit-btn {
+  background-color: #1195db;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+<!--pages/myself/set/sex/sex.wxml-->
+<view>
+  <radio-group bindchange='radioChange'>
+    <view class='header'>
+        <view class='radio-box'><radio value='0' checked='{{sex == 0 ? true : false}}'></radio><text>男</text><image src='/image/icon_sex_men.png'/></view>
+        <view class='radio-box'><radio value='1' checked='{{sex == 1 ? true : false}}'></radio><text>女</text><image src='/image/icon_sex_woman.png'/></view>
+        <view class='radio-box'><radio value='2' checked='{{sex == 2 ? true : false}}'></radio><text>保密</text><image src='/image/icon_sex_unknown.png'/></view>
+    </view>
+  </radio-group>
+  <view class='content'></view>
+  <view class='footer'>
+    <button bindtap='saveSex' class='save-btn' size='80%'>保存</button>
+  </view>
+</view>

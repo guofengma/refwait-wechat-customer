@@ -1,0 +1,26 @@
+<!--pages/home/home.wxml-->
+<import src="../template/template"/>
+<view class='header'>
+  <view class='search-box'>
+    <image class='search-box-img' src='/image/icon_search.png'/>
+  </view>
+  <view class='swiper-box'>
+    <swiper indicator-dots="{{true}}" indicator-color="#8a8a8a" indicator-active-color="#1195db" autoplay="{{true}}" interval="3000">
+      <block wx:for="{{swiperList}}" wx:key="key">
+        <swiper-item>
+          <image bindtap='test' class='swiper-image' src='{{item}}'/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</view>
+<view class='content'>
+  <view class='sort-box'>
+    <view class="{{choice[0] ? 'elect' : ''}}" id="0" bindtap='merchantSort'>综合评价</view>
+    <view class="{{choice[1] ? 'elect' : ''}}" id="1" bindtap='merchantSort' style='border-left:3px solid lightslategrey; border-right:3px solid lightslategrey;'>好评优先</view>
+    <view class="{{choice[2] ? 'elect' : ''}}" id="2" bindtap='merchantSort'>距离最近</view>
+  </view>
+  <block wx:for="{{merchants}}" wx:for-item="merchant" wx:key="key">
+    <template is="merchantInfo" data="{{...merchant, index}}"/>
+  </block>
+</view>
