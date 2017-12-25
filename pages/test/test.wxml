@@ -1,11 +1,4 @@
 <!--pages/test/test.wxml-->
-<view class='header'>
-  <view class='search'></view>
-  <swiper class='swiper-box' indicator-dots="{{true}}" indicator-color="#8a8a8a" indicator-active-color="#1195db" autoplay="{{true}}" interval="3000">
-    <block wx:for="{{swiperList}}" wx:key="key">
-      <swiper-item>
-        <image bindtap='test' class='swiper-image' src='{{item}}'/>
-      </swiper-item>
-    </block>
-  </swiper>
-</view>
+<button bindtap='sendVerificationCode'>
+{{msg}}
+</button>

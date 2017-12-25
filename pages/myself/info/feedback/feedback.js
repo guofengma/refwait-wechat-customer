@@ -15,6 +15,13 @@ Page({
    */
   submitFeedback: function () {
     var content = this.data.content;
+    if (content.length < 8) {
+      wx.showToast({
+        title: '字数请大于8位',
+        image: '/image/icon_error.png'
+      })
+      return;
+    }
     wx.request({
       url: app.url + '/refwait/feedback/addNewFeedback',
       method: 'POST',
@@ -30,11 +37,11 @@ Page({
         if (res.data == 'success') {
           wx.navigateBack();
           wx.showToast({
-            title: '提交成功',
+            title: '反馈成功',
           })
         } else {
           wx.showToast({
-            title: '提交失败',
+            title: '反馈失败',
             image: '/image/icon_error.png'
           })
         }

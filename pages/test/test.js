@@ -11,7 +11,26 @@ Page({
       message: 'foo',
     }, {
       message: 'bar'
-    }]
+    }],
+    msg: "发送验证码"
+  },
+
+  /**
+   * 获取验证码
+   */
+  sendVerificationCode: function () {
+    console.log("获取验证码");
+    var time = 60;
+    var that = this;
+    var interval = setInterval(function (){
+      that.setData({
+        msg: time
+      });
+      time--;
+      if (time < 0) {
+        clearInterval(interval);
+      }
+    }, 1000)
   },
 
   /**

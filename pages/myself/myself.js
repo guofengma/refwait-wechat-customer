@@ -176,6 +176,7 @@ Page({
     }
     if (customer.mobilePhone != 'unset') {
       list.mobilePhone.flag = false;
+      console.log('执行这里', customer.mobilePhone);
       list.mobilePhone.text = customer.mobilePhone;
     }
     switch (customer.sex) {

@@ -32,6 +32,15 @@ page {
   color: #1195db;
 }
 
+.code-btn-cancel {
+  width: 30%;
+  font-size: 25rpx;
+  margin-right: 36rpx;
+  background-color: #C0C0C0;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
 .input-box-code {
     margin: 5rpx 25rpx;
 }

@@ -12,8 +12,37 @@ Page({
     flag: true,
     phone: '',
     code: '',
-    tempPhone: '',
-    tempCode: ''
+    tempPhone: '1',
+    tempCode: '1',
+    time: 60,
+    btnmsg: '获取验证码',
+    // 获取验证码是否可用
+    cooling: true
+  },
+
+  /**
+   * 开始倒计时
+   */
+  countdown: function () {
+    console.log("开始倒计时");
+    var that = this;
+    var time = 60;
+    that.setData({
+      cooling: false
+    });
+    var interval = setInterval(function () {
+      that.setData({
+        btnmsg: time + 's'
+      });
+      time--;
+      if (time < 55) {
+        clearInterval(interval);
+        that.setData({
+          btnmsg: '获取验证码',
+          cooling: true
+        });
+      }
+    }, 1000);
   },
 
   /**
@@ -23,7 +52,12 @@ Page({
     var phone = this.data.phone;
     var code = this.data.code;
     var customer = app.customer;
-    if (this.data.tempPhone == phone && this.data.tempCode == code) {
+    if (phone.length != 11) {
+      wx.showToast({
+        title: '请输入正确手机号',
+        image: '/image/icon_error.png'
+      });
+    } else if (this.data.tempPhone == phone && this.data.tempCode == code) {
       wx.request({
         url: app.url + '/refwait/customer/setCustomerMobilePhone',
         method: 'GET',
@@ -49,7 +83,7 @@ Page({
       })
     } else {
       wx.showToast({
-        title: '验证码输入有误',
+        title: '输入有误',
         image: '/image/icon_error.png'
       })
     }
@@ -61,13 +95,16 @@ Page({
   codeChange: function (e) {
     this.setData({
       code: e.detail.value
-    })
+    });
   },
 
   /**
    * 获取验证码
    */
   getVerificationCode: function () {
+    // 如果获取验证码正在冷却中
+    if (!this.data.cooling)
+      return;
     var that = this;
     var flag = this.data.flag;
     var phone = this.data.phone;
@@ -99,9 +136,15 @@ Page({
               code: res.data,
               tempCode: res.data,
               tempPhone: phone
-            })
+            });
+            that.countdown();
           }
         }
+      })
+    } else {
+      wx.showToast({
+        title: '请输入正确手机号',
+        image: '/image/icon_error.png'
       })
     }
   },
