@@ -1,7 +1,8 @@
 //app.js
 App({
   // 后台服务器地址
-  url: 'http://localhost:8080',
+  // url: 'http://localhost:8080',
+  url: 'http://120.78.182.217',
   // 微信用户信息
   userInfo: '',
   // 顾客信息

@@ -1,4 +1,7 @@
 <!--pages/test/test.wxml-->
+<!--
 <button bindtap='sendVerificationCode'>
 {{msg}}
 </button>
+-->
+<view class='header'></view>

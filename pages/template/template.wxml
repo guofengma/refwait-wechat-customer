@@ -5,25 +5,25 @@
       <image src='{{iconUrl}}'></image>
     </view>
     <view class='merchant-box-mid'>
-      <view class='merchant-box-mid-name'>
-        <text>{{name}}</text>
+      <view class='merchant-box-mid-name'><text>{{name}}</text></view>
+      <view class='merchant-box-mid-star'>
+        <image src='/image/icon_star.png'></image>
+        <image src='/image/icon_star.png'></image>
+        <image src='/image/icon_star.png'></image>
       </view>
-      <view class='merchant-box-mid-heat'>
-        <image src='/image/icon_heat.png'></image>
-        <text>{{heatValue}}</text>
-      </view>
+      <view class='merchant-box-mid-price'><text>人均15/人</text></view>
+      <view class='merchant-box-mid-time'><text>预计时间：20分钟</text></view>
     </view>
     <view class='merchant-box-right'>
-      <view class='merchant-box-right-status'>
-        <image src="{{status == 0 ? '/image/icon_rest.png' : '/image/icon_business.png'}}"></image>
-      </view>
       <view class='merchant-box-right-distance'>
-        <text>距离{{distance}}Km</text>
+        <text>{{distance}}km</text>
+      </view>
+      <view class='merchant-box-right-status'>
+        <image src="/image/icon_{{status == 1 ? 'business' : 'rest'}}.png"></image>
+      </view>
+      <view class='merchant-box-right-collect'>
+        <image src="/image/icon_{{collect == 1 ? 'collect' : 'uncollect'}}.png"></image>
       </view>
     </view>
   </view>
-</template>
-
-<template name="templateTest">
-  <view class="temp-text">templateTest</view>
 </template>

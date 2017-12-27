@@ -15,6 +15,7 @@ Page({
       "address": "科干xxxxxx",
       "iconUrl": "/image/icon_merchant.png",
       "status": 1,
+      "collect": 1,
       "distance": 1.5,
       "heatValue": "5"
     }, 
@@ -24,6 +25,7 @@ Page({
       "address": "科干xxxxxx",
       "iconUrl": "/image/icon_merchant.png",
       "status": 1,
+      "collect": 1,
       "distance": 1.4,
       "heatValue": "4"
     },
@@ -33,6 +35,7 @@ Page({
       "address": "科干xxxxxx",
       "iconUrl": "/image/icon_merchant.png",
       "status": 0,
+      "collect": 0,
       "distance": 1.3,
       "heatValue": "3"
     },
@@ -42,6 +45,7 @@ Page({
       "address": "科干xxxxxx",
       "iconUrl": "/image/icon_merchant.png",
       "status": 1,
+      "collect": 1,
       "distance": 1.2,
       "heatValue": "2"
     },
@@ -51,6 +55,7 @@ Page({
       "address": "科干xxxxxx",
       "iconUrl": "/image/icon_merchant.png",
       "status": 0,
+      "collect": 0,
       "distance": 1.1,
       "heatValue": "1"
     }]

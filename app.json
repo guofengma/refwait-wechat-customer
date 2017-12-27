@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/myself/myself",
-    "pages/test/test",
     "pages/index/index",
+    "pages/test/test",
+    "pages/myself/myself",
     "pages/logs/logs",
     "pages/template/template",
     "pages/myself/info/name/name",
@@ -14,9 +14,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1195db",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "whilt"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#8a8a8a",

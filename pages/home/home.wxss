@@ -5,7 +5,7 @@ page {
 
 .header {
   width: 100%;
-  height: 400rpx;
+  height: 370rpx;
   background-color: #fff;
   position: relative;
 }
@@ -18,9 +18,9 @@ page {
   bottom: 0;
   left: 0;
   margin: 25rpx auto;
-  width: 80%;
-  height: 15%;
-  padding: 5rpx 15rpx;
+  width: 73%;
+  height: 50rpx;
+  padding: 5rpx 20rpx;
   border-radius: 40rpx;
   background-color: #fff;
   opacity: 0.6;
@@ -28,8 +28,8 @@ page {
 }
 
 .search-box-img {
-  width: 50rpx;
-  height: 50rpx;
+  width: 47rpx;
+  height: 47rpx;
 }
 
 .swiper-box {
@@ -57,17 +57,23 @@ page {
   height: 100rpx;
   display: flex;
   justify-content: space-around;
+  background-color: #F8F8F8;
 }
 
 .sort-box view {
   margin: auto 0;
   width: 33%;
   text-align: center;
-  color: lightslategrey;
+  color: #777777;
+  font-weight: bold;
   font-size: 33rpx;
 }
 
+.sort-box .sort-box-text {
+  border-bottom: 5rpx solid #ACD697;
+  padding-bottom: 28rpx;
+}
+
 .sort-box .elect {
-  font-weight: bold;
-  color: #1195db;
+  color: #ACD697;
 }

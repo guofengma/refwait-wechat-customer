@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.7.0",
 	"appid": "wxd6d09df55439dd0d",
-	"projectname": "refwait",
+	"projectname": "refwait-customer",
 	"condition": {
 		"search": {
 			"current": -1,
