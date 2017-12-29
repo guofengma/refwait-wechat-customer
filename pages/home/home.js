@@ -9,6 +9,8 @@ Page({
     "url": 'http://localhost:8080',
     "swiperList": ["/image/swiper1.jpg", "/image/swiper2.jpg", "/image/swiper3.jpg"],
     "choice": [true, false, false],
+    "load": "加载中...",
+    "isLoad": true,
     "merchants": [{
       "id": 0,
       "name": "老火靓汤",
@@ -66,6 +68,23 @@ Page({
    */
   lower: function () {
     console.log('触底');
+    var that = this;
+    if (that.data.isLoad) {
+      console.log('加载中');
+      var load = ['加载中.', '加载中..', '加载中...'];
+      var index = 0;
+      that.setData({
+        isLoad: false
+      })
+      var interval = setInterval(function () {
+        that.setData({
+          load: load[index]
+        })
+        index++;
+        if (index > 2)
+          index = 0;
+      }, 500);
+    }
   },
 
   /**
@@ -74,7 +93,6 @@ Page({
   merchantSort: function (options) {
     var that = this;
     var index = options.currentTarget.id;
-    console.log("下标为",index);
     var choice = that.data.choice;
     for (var i = 0; i < choice.length; i++) {
       choice[i] = i == index ? true : false;
@@ -135,7 +153,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log('页面触底')
+    this.lower();
   },
 
   /**

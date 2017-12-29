@@ -44,12 +44,13 @@ page {
 }
 
 .merchant-box-mid-name {
-  margin-top: 20rpx;
+  margin-top: 7%;
+  height: 25%;
   font-weight: 570;
 }
 
 .merchant-box-mid-star {
-  margin-top: 12rpx;
+  height: 17%;
   font-size: 22rpx;
 }
 
@@ -60,12 +61,12 @@ page {
 }
 
 .merchant-box-mid-price {
-  margin-top: 12rpx;
+  height: 21%;
+  font-size: 28rpx;
 }
 
 .merchant-box-mid-time {
-  margin-top: 12rpx;
-  margin-bottom: 20rpx;
+  font-size: 28rpx;
 }
 
 .merchant-box-right {
@@ -75,18 +76,19 @@ page {
 
 .merchant-box-right-distance {
   margin-top: 20rpx;
+  font-size: 32rpx;
 }
 
 .merchant-box-right-status image {
-  width: 60rpx;
-  height: 60rpx;
-  margin-top: 5rpx;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
   margin-left: 40rpx;
 }
 
 .merchant-box-right-collect image {
-  width: 60rpx;
-  height: 55rpx;
-  margin-top: 5rpx;
+  width: 50rpx;
+  height: 45rpx;
+  margin-top: 15rpx;
   margin-left: 40rpx;
 }

@@ -24,3 +24,6 @@
     <template is="merchantInfo" data="{{...merchant, index}}"/>
   </block>
 </view>
+<view class='footer'>
+  <text>{{load}}</text>
+</view>
