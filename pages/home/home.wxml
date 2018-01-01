@@ -16,7 +16,7 @@
 </view>
 <view class='content'>
   <view class='sort-box'>
-    <view class="{{choice[0] ? 'elect' : ''}}" id="0" bindtap='merchantSort'>综<text class="{{choice[0] ? 'sort-box-text' : ''}}">合评</text>价</view>
+    <view class="{{choice[0] ? 'elect' : ''}}" id="0" bindtap='merchantSort'>综<text class="{{choice[0] ? 'sort-box-text' : ''}}">合排</text>序</view>
     <view class="{{choice[1] ? 'elect' : ''}}" id="1" bindtap='merchantSort' style='border-left:5rpx solid lightslategrey; border-right:5rpx solid lightslategrey;'>好<text class="{{choice[1] ? 'sort-box-text' : ''}}">评优</text>先</view>
     <view class="{{choice[2] ? 'elect' : ''}}" id="2" bindtap='merchantSort'>距<text class="{{choice[2] ? 'sort-box-text' : ''}}">离最</text>近</view>
   </view>

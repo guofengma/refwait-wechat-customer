@@ -6,61 +6,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    "url": 'http://localhost:8080',
     "swiperList": ["/image/swiper1.jpg", "/image/swiper2.jpg", "/image/swiper3.jpg"],
     "choice": [true, false, false],
-    "load": "加载中...",
+    "load": "正在加载...",
     "isLoad": true,
-    "merchants": [{
-      "id": 0,
-      "name": "老火靓汤",
-      "address": "科干xxxxxx",
-      "iconUrl": "/image/icon_merchant.png",
-      "status": 1,
-      "collect": 1,
-      "distance": 1.5,
-      "heatValue": "5"
-    }, 
-    {
-      "id": 1,
-      "name": "麻辣香锅",
-      "address": "科干xxxxxx",
-      "iconUrl": "/image/icon_merchant.png",
-      "status": 1,
-      "collect": 1,
-      "distance": 1.4,
-      "heatValue": "4"
-    },
-    {
-      "id": 2,
-      "name": "威福克",
-      "address": "科干xxxxxx",
-      "iconUrl": "/image/icon_merchant.png",
-      "status": 0,
-      "collect": 0,
-      "distance": 1.3,
-      "heatValue": "3"
-    },
-    {
-      "id": 3,
-      "name": "原味坊",
-      "address": "科干xxxxxx",
-      "iconUrl": "/image/icon_merchant.png",
-      "status": 1,
-      "collect": 1,
-      "distance": 1.2,
-      "heatValue": "2"
-    },
-    {
-      "id": 4,
-      "name": "原味汤粉王",
-      "address": "科干xxxxxx",
-      "iconUrl": "/image/icon_merchant.png",
-      "status": 0,
-      "collect": 0,
-      "distance": 1.1,
-      "heatValue": "1"
-    }]
+    "merchants": ''
+  },
+
+  /**
+   * 显示附近商家信息
+   */
+  showNearMerchants: function () {
+    var that = this;
+    // 获取当前位置经纬度
+    wx.getLocation({
+      success: function(res) {
+        console.log(res);
+        app.longitude = res.longitude;
+        app.latitude = res.latitude;
+        // 根据经纬度获取附近商家信息
+        wx.request({
+          url: app.url + '/refwait/merchant/listNearMerchants',
+          method: 'GET',
+          data: {
+            longitude: app.longitude,
+            latitude: app.latitude
+          },
+          success: function (res) {
+            console.log(res);
+            that.setData({
+              merchants: res.data
+            })
+          }
+        })
+      },
+    })
   },
 
   /**
@@ -71,7 +51,7 @@ Page({
     var that = this;
     if (that.data.isLoad) {
       console.log('加载中');
-      var load = ['加载中.', '加载中..', '加载中...'];
+      var load = ['正在加载.', '正在加载..', '正在加载...'];
       var index = 0;
       that.setData({
         isLoad: false
@@ -84,6 +64,25 @@ Page({
         if (index > 2)
           index = 0;
       }, 500);
+      wx.request({
+        url: app.url + '/refwait/merchant/listNearMerchants',
+        method: 'GET',
+        data: {
+          longitude: app.longitude,
+          latitude: app.latitude
+        },
+        success: function (res) {
+          console.log(res);
+          var merchants = that.data.merchants;
+          for (var i = 0; i < res.data.length; i++) {
+            merchants.push(res.data[i]);
+          }
+          that.setData({
+            merchants: merchants
+          })
+        }
+      })
+      clearInterval(interval);
     }
   },
 
@@ -106,12 +105,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 显示加载中图标
     wx.showToast({
       title: '加载中',
       icon: 'loading',
       duration: 10000
     });
+    this.showNearMerchants();
     console.log(this.data.merchants);
+    // 隐藏加载中图标
     wx.hideToast();
   },
 

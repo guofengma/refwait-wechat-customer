@@ -7,11 +7,11 @@
     <view class='merchant-box-mid'>
       <view class='merchant-box-mid-name'><text>{{name}}</text></view>
       <view class='merchant-box-mid-star'>
-        <image src='/image/icon_star.png'></image>
-        <image src='/image/icon_star.png'></image>
-        <image src='/image/icon_star.png'></image>
+        <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="i" wx:key="key">
+          <image wx:if="{{i <= starValue}}" src='/image/icon_star.png'></image>
+        </block>
       </view>
-      <view class='merchant-box-mid-price'><text>人均15/人</text></view>
+      <view class='merchant-box-mid-price'><text>人均{{priceOfAvg}}/人</text></view>
       <view class='merchant-box-mid-time'><text>预计时间：20分钟</text></view>
     </view>
     <view class='merchant-box-right'>

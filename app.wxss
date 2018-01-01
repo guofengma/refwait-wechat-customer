@@ -45,8 +45,10 @@ page {
 
 .merchant-box-mid-name {
   margin-top: 7%;
-  height: 25%;
+  margin-bottom: 3%;
+  height: 20%;
   font-weight: 570;
+  overflow: hidden;
 }
 
 .merchant-box-mid-star {
