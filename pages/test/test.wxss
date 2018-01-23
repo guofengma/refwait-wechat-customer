@@ -5,3 +5,122 @@
   background-color: #fff;
   position: relative;
 }
+
+.main {
+  height: 1334rpx;
+  width: 750rpx;
+  background-color: #666;
+   /* background-image: url("http://120.78.182.217/images/temp_home.png");  */
+  background-size: 750rpx 1334rpx;
+}
+
+.top {
+  height: 570rpx;
+  width: 750rpx;
+}
+
+.content {
+  width: 750rpx;
+  height: 220rpx;
+  opacity: 0.6;
+  display: flex;
+  background-color: #40E0D0;
+}
+
+.left {
+  width: 245rpx;
+  height: 222rpx;
+}
+
+.left image {
+  width: 190rpx;
+  height: 182rpx;
+  border-radius: 10rpx;
+  margin: 20rpx;
+  background-color: #9C2930;
+}
+
+.mid {
+  width: 385rpx;
+  height: 222rpx;
+}
+
+.mid-name {
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+
+.mid-name-text {
+  font-size: 28rpx;
+}
+
+.mid-start {
+  height: 45rpx;
+}
+
+.mid-start image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+
+.mid-price {
+    height: 50rpx;
+}
+
+.mid-price-text {
+  font-size: 28rpx;
+}
+
+.mid-runtime {
+  padding-top: 5rpx;
+      height: 50rpx;
+}
+
+.mid-runtime-text {
+  font-size: 28rpx;
+}
+
+.right {
+  height: 222rpx;
+  width: 120rpx;
+}
+
+.right-discount {
+  height: 80rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-discount text {
+    font-size: 28rpx;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.right-status {
+  height: 55rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
+}
+
+.right-status image {
+  margin-left: 57rpx;
+  width: 47rpx;
+  height: 47rpx;
+}
+
+.right-heart {
+  height: 75rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
+}
+
+.right-heart image {
+  margin-left: 54rpx;
+  width: 47rpx;
+  height: 45rpx;
+}

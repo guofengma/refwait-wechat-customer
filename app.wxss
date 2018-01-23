@@ -1,8 +1,13 @@
 /**app.wxss**/
+/** 全局css **/
 page {
   background-color: #F0F0F0;
   display: block;
   min-height: 100%;
+}
+
+text {
+  letter-spacing: 5rpx;
 }
 
 .container {
@@ -16,81 +21,113 @@ page {
 } 
 
 .merchant-box {
-  width: 100%;
-  height: 222rpx;
+  width: 750rpx;
+  height: 220rpx;
   border-bottom: 3rpx solid #A0A0A0;
   display: flex;
 }
 
 .merchant-box-left {
-  height: 100%;
   width: 245rpx;
+  height: 222rpx;
 }
 
 .merchant-box-left image {
-  width: 182rpx;
-  height: 190rpx;
+  width: 190rpx;
+  height: 182rpx;
+  border-radius: 10rpx;
   margin: 20rpx;
-  background-color: #ACD598;
-  border-radius: 15rpx;
+  background-color: #9C2930;
 }
 
 .merchant-box-mid {
-  height: 100%;
-  width: 375rpx;
-  color: #282828;
-  font-family: 'SimHei';
-  letter-spacing: 2rpx;
+  width: 385rpx;
+  height: 222rpx;
 }
 
 .merchant-box-mid-name {
-  margin-top: 7%;
-  margin-bottom: 3%;
-  height: 20%;
-  font-weight: 570;
+  height: 40rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  width: 350rpx;
+}
+
+.merchant-box-mid-name text {
+  font-size: 28rpx;
+  /* 解决文字 */
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .merchant-box-mid-star {
-  height: 17%;
-  font-size: 22rpx;
+  height: 40rpx;
 }
 
 .merchant-box-mid-star image {
-  width: 22rpx;
-  height: 22rpx;
-  margin-right: 3rpx;
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
 }
 
 .merchant-box-mid-price {
-  height: 21%;
+  height: 50rpx;
+}
+
+.merchant-box-mid-price text {
   font-size: 28rpx;
 }
 
 .merchant-box-mid-time {
+  padding-top: 5rpx;
+  height: 50rpx;
+}
+
+.merchant-box-mid-time text {
   font-size: 28rpx;
 }
 
 .merchant-box-right {
-  height: 100%;
-  width: 130rpx;
+  height: 222rpx;
+  width: 120rpx;
 }
 
 .merchant-box-right-distance {
-  margin-top: 20rpx;
-  font-size: 32rpx;
+  height: 80rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.merchant-box-right-distance text {
+  font-size: 28rpx;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.merchant-box-right-status {
+  height: 55rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
 }
 
 .merchant-box-right-status image {
-  width: 50rpx;
-  height: 50rpx;
-  margin-top: 20rpx;
-  margin-left: 40rpx;
+  margin-left: 57rpx;
+  width: 47rpx;
+  height: 47rpx;
+}
+
+.merchant-box-right-collect {
+  height: 75rpx;
+  width: 120rpx;
+  display: flex;
+  align-items: center;
 }
 
 .merchant-box-right-collect image {
-  width: 50rpx;
+  margin-left: 54rpx;
+  width: 47rpx;
   height: 45rpx;
-  margin-top: 15rpx;
-  margin-left: 40rpx;
 }

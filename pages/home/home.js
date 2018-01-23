@@ -1,6 +1,6 @@
 // pages/home/home.js
 //获取应用实例
-const app = getApp();
+const app = getApp()
 Page({
   /**
    * 页面的初始数据
@@ -17,13 +17,13 @@ Page({
    * 显示附近商家信息
    */
   showNearMerchants: function () {
-    var that = this;
+    var that = this
     // 获取当前位置经纬度
     wx.getLocation({
       success: function(res) {
-        console.log(res);
-        app.longitude = res.longitude;
-        app.latitude = res.latitude;
+        console.log(res)
+        app.longitude = res.longitude
+        app.latitude = res.latitude
         // 根据经纬度获取附近商家信息
         wx.request({
           url: app.url + '/refwait/merchant/listNearMerchants',
@@ -33,7 +33,7 @@ Page({
             latitude: app.latitude
           },
           success: function (res) {
-            console.log(res);
+            console.log(res)
             that.setData({
               merchants: res.data
             })
@@ -47,12 +47,12 @@ Page({
    * 触底加载
    */
   lower: function () {
-    console.log('触底');
-    var that = this;
+    console.log('触底')
+    var that = this
     if (that.data.isLoad) {
-      console.log('加载中');
-      var load = ['正在加载.', '正在加载..', '正在加载...'];
-      var index = 0;
+      console.log('加载中')
+      var load = ['正在加载.', '正在加载..', '正在加载...']
+      var index = 0
       that.setData({
         isLoad: false
       })
@@ -60,10 +60,10 @@ Page({
         that.setData({
           load: load[index]
         })
-        index++;
+        index++
         if (index > 2)
-          index = 0;
-      }, 500);
+          index = 0
+      }, 500)
       wx.request({
         url: app.url + '/refwait/merchant/listNearMerchants',
         method: 'GET',
@@ -72,17 +72,17 @@ Page({
           latitude: app.latitude
         },
         success: function (res) {
-          console.log(res);
+          console.log(res)
           var merchants = that.data.merchants;
           for (var i = 0; i < res.data.length; i++) {
-            merchants.push(res.data[i]);
+            merchants.push(res.data[i])
           }
           that.setData({
             merchants: merchants
           })
         }
       })
-      clearInterval(interval);
+      clearInterval(interval)
     }
   },
 
@@ -90,9 +90,9 @@ Page({
    * 根据条件进行商家排序
    */
   merchantSort: function (options) {
-    var that = this;
-    var index = options.currentTarget.id;
-    var choice = that.data.choice;
+    var that = this
+    var index = options.currentTarget.id
+    var choice = that.data.choice
     for (var i = 0; i < choice.length; i++) {
       choice[i] = i == index ? true : false;
     }
@@ -110,11 +110,11 @@ Page({
       title: '加载中',
       icon: 'loading',
       duration: 10000
-    });
-    this.showNearMerchants();
-    console.log(this.data.merchants);
+    })
+    this.showNearMerchants()
+    console.log(this.data.merchants)
     // 隐藏加载中图标
-    wx.hideToast();
+    wx.hideToast()
   },
 
   /**
@@ -155,7 +155,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.lower();
+    this.lower()
   },
 
   /**

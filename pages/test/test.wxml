@@ -4,4 +4,40 @@
 {{msg}}
 </button>
 -->
-<view class='header'></view>
+<view class='main'>
+  <view class='top'>
+  </view>
+  <view class='content'>
+    <view class='left'>
+      <image></image>
+    </view>
+    <view class='mid'>
+      <view class='mid-name'>
+        <text class='mid-name-text'>麻辣香锅</text>
+      </view>
+      <view class='mid-start'>
+        <image src='/image/icon_star.png'></image>
+        <image src='/image/icon_star.png'></image>
+        <image src='/image/icon_star.png'></image>
+        <image src='/image/icon_star.png'></image>
+      </view>
+      <view class='mid-price'>
+        <text class='mid-price-text'>人均15/人</text>
+      </view>
+      <view class='mid-runtime'>
+        <text class='mid-runtime-text'>预计送餐时间：20分钟</text>
+      </view>
+    </view>
+    <view class='right'>
+      <view class='right-discount'>
+        <text>1.6km</text>
+      </view>
+      <view class='right-status'>
+        <image src='/image/icon_business.png'></image>
+      </view>
+      <view class='right-heart'>
+        <image src='/image/icon_collect.png'></image>
+      </view>
+    </view>
+  </view>
+</view>
